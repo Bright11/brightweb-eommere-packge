@@ -1,0 +1,2 @@
+
+@livewire('brightweb::navbar.navbar')

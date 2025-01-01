@@ -1,0 +1,24 @@
+#google_translate_element .goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+#google_translate_element .goog-te-gadget {
+  color: transparent !important;
+  padding: 10px !important; /* Add padding to the container */
+}
+
+#google_translate_element .goog-te-gadget .goog-te-combo {
+  color: black !important;
+  padding: 5px !important; /* Add padding to the dropdown */
+}
+
+#google_translate_element .goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget span {
+  display: none !important;
+}
+
+
+/* nav */

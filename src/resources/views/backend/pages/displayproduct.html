@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="admincss/admincss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="admincss/datatable.css" />
+  </head>
+  <body>
+    <section class="admin_section">
+      <div class="admin_container">
+        <!-- top ba -->
+        <div class="admin_topbar">
+          <ul class="admin_topbar_ul">
+            <ul>
+              <li><a href="">Dashboard</a></li>
+              <li><a href="">Product</a></li>
+              <li><a href="">Category</a></li>
+              <li><a href="">Users</a></li>
+            </ul>
+            <ul>
+              <li><a href="">Settings</a></li>
+              <li><a href="">SEO</a></li>
+              <li><a href="">Logout</a></li>
+              <li><a href="">Help</a></li>
+            </ul>
+          </ul>
+        </div>
+        <div class="page_admin_container">
+          <div class="admin_sidebar">
+            <ul class="admin_ul">
+              <li><a href="">Dashiboard</a></li>
+              <li><a href="">Product</a></li>
+              <li><a href="">Category</a></li>
+              <li><a href="">Users</a></li>
+              <li><a href="">Settings</a></li>
+              <li><a href="">SEO</a></li>
+              <li><a href="">Logout</a></li>
+              <li><a href="">Logout</a></li>
+            </ul>
+          </div>
+          <div class="admin_content">
+            <table id="myTable" class="display" style="width: 100%">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Position</th>
+                  <th>Office</th>
+                  <th>Age</th>
+                  <th>Start date</th>
+                  <th>Salary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tiger Nixon</td>
+                  <td>System Architect</td>
+                  <td>Edinburgh</td>
+                  <td>61</td>
+                  <td>2011-04-25</td>
+                  <td>$320,800</td>
+                </tr>
+                <tr>
+                  <td>Garrett Winters</td>
+                  <td>Accountant</td>
+                  <td>Tokyo</td>
+                  <td>63</td>
+                  <td>2011-07-25</td>
+                  <td>$170,750</td>
+                </tr>
+                <tr>
+                  <td>Ashton Cox</td>
+                  <td>Junior Technical Author</td>
+                  <td>San Francisco</td>
+                  <td>66</td>
+                  <td>2009-01-12</td>
+                  <td>$86,000</td>
+                </tr>
+                <tr>
+                  <td>Cedric Kelly</td>
+                  <td>Senior Javascript Developer</td>
+                  <td>Edinburgh</td>
+                  <td>22</td>
+                  <td>2012-03-29</td>
+                  <td>$433,060</td>
+                </tr>
+                <tr>
+                  <td>Airi Satou</td>
+                  <td>Accountant</td>
+                  <td>Tokyo</td>
+                  <td>33</td>
+                  <td>2008-11-28</td>
+                  <td>$162,700</td>
+                </tr>
+                <tr>
+                  <td>Brielle Williamson</td>
+                  <td>Integration Specialist</td>
+                  <td>New York</td>
+                  <td>61</td>
+                  <td>2012-12-02</td>
+                  <td>$372,000</td>
+                </tr>
+                <tr>
+                  <td>Herrod Chandler</td>
+                  <td>Sales Assistant</td>
+                  <td>San Francisco</td>
+                  <td>59</td>
+                  <td>2012-08-06</td>
+                  <td>$137,500</td>
+                </tr>
+                <tr>
+                  <td>Rhona Davidson</td>
+                  <td>Integration Specialist</td>
+                  <td>Tokyo</td>
+                  <td>55</td>
+                  <td>2010-10-14</td>
+                  <td>$327,900</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DataTables JS -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- DataTables JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"
+    ></script>
+    <!-- DataTables Buttons JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"
+    ></script>
+    <!-- JSZip for Excel export -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
+    ></script>
+    <!-- pdfmake for PDF export -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"
+    ></script>
+    <!-- Buttons HTML5 export JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"
+    ></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- DataTables JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"
+    ></script>
+    <!-- DataTables Buttons JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"
+    ></script>
+    <!-- JSZip for Excel export -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"
+    ></script>
+    <!-- pdfmake for PDF export -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"
+    ></script>
+    <!-- Buttons HTML5 export JS -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"
+    ></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#myTable").DataTable({
+          dom: "Bftip",
+          buttons: [
+            {
+              extend: "copy",
+              className: "custom-btn btn btn-outline-primary",
+            },
+            {
+              extend: "excel",
+              className: "custom-btn btn btn-outline-success",
+            },
+            {
+              extend: "pdf",
+              className: "custom-btn btn btn-outline-danger",
+              customize: function (doc) {
+                var dataUrl = getBase64Image(document.querySelector("img"));
+                doc.content[1].table.body.forEach(function (row, i) {
+                  if (i > 0) {
+                    row.push({
+                      image: dataUrl,
+                      width: 50,
+                      height: 50,
+                    });
+                  }
+                });
+              },
+            },
+          ],
+        });
+
+        function getBase64Image(img) {
+          var canvas = document.createElement("canvas");
+          canvas.width = img.width;
+          canvas.height = img.height;
+          var ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0);
+          var dataURL = canvas.toDataURL("image/png");
+          return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+        }
+      });
+    </script>
+
+    <style>
+      .custom-btn {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-bottom: 10px; /* Add margin bottom */
+      }
+
+      .custom-btn:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid #4caf50;
+      }
+
+      /* Hide DataTables bottom navigation, content, and headers */
+      .dataTables_paginate,
+      .dataTables_info,
+      .dataTables_filter,
+      .dataTables_length,
+      .dataTables_scrollBody,
+      tfoot tr,
+      .dataTables_scrollFoot {
+        display: none !important;
+      }
+    </style>
+  </body>
+</html>

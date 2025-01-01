@@ -1,0 +1,31 @@
+{
+    "name": "brightweb/ecommerce",
+    "description": "Brightweb ecommerce package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Brightweb\\Ecommerce\\": "src/"
+        }
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Brightweb\\Ecommerce\\Providers\\BrightserviceProvider",
+                "Brightweb\\Ecommerce\\Providers\\Brightlivewiresettings",
+                "Brightweb\\Ecommerce\\Providers\\ConfigServiceProvider",
+                "Brightweb\\Ecommerce\\Providers\\BrightfetchdataServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Brightweb"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "livewire/livewire": "^3.0" 
+    }
+}

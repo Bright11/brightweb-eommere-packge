@@ -1,0 +1,279 @@
+
+.product_section{
+    max-width: 90%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pro_category_links{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.pro_category_links div{
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 8px;
+    border-radius: var(--border-radius);
+}
+.pro_category_links div a{
+    color: var(--btn-color);
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight700);
+    font-size: var(--font-size16);
+}
+
+.product_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.mytopslider .product_item_holder{
+    width: 250px;
+    text-align: center;
+    height: 330px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 8px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.product_container .product_item_holder{
+    width: 250px;
+    text-align: center;
+    height: 400px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 8px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.product_item_holder a{
+    text-decoration: none;
+    font-family: var(--font-family);
+}
+.product_item_holder .proimage {
+    width: 100%;
+    height: 250px;
+}
+.product_item_holder .proimage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product_name_div h1{
+    margin: 0px;
+    font-size: var(--font-size12);
+    font-weight: var(--font-weight300);
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+.product_name_div p{
+    margin: 5px 0px;
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight400);
+    font-family: var(--font-family);
+    color: var(--text-color)!important;
+}
+.product_price p{
+    margin: 5px 0px;
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight600);
+    font-family: var(--font-family);
+    color: var(--text-color) !important;
+}
+
+.pro_icons_position{
+    position: absolute;
+    top: 10% !important;
+    right: 0;
+    padding: 5px 8px;
+    font-size: var(--font-size14);
+    font-weight: var(--font-weight600);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 16px !important;
+    flex-direction: column;
+}
+
+.pro_icons_position div{
+    margin: 6px 0px;
+    background-color: var(--primary-color);
+    color: var(--btn-color);
+    padding: 5px;
+    border-radius: 10px;
+}
+.pro_icons_position div a{
+    text-decoration: none;
+    color: var(--btn-color);
+}
+.pro_icons_position div a i{
+    color: var(--btn-color);
+    font-size: 20px;
+}
+.product_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.product_buttons .addtocartdiv{
+    background-color: var(--primary-color);
+    padding: 8px;
+    width: fit-content;
+}
+.product_buttons .addtocartdiv a{
+    text-decoration: none;
+    color: var(--btn-color);
+    font-size: var(--font-size12);
+    font-weight: var(--font-weight400);
+    font-family: var(--font-family);
+}
+.product_buttons div p{
+    margin: 0px;
+    font-size: var(--font-size12);
+    font-weight: var(--font-weight300);
+    color: var(--text-color) !important;
+}
+
+.pro_discount{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    padding: 6px;
+    border-radius: var(--border-color);
+    margin-top: 4px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+.pro_discount p{
+    color: var(--btn-color);
+    font-size: var(--font-size14);
+    font-weight: var(--font-weight600);
+    text-transform: uppercase;
+}
+input{
+    outline: none;
+}
+        .qty_btn_div{
+          display:flex;
+          align-items:center;
+          gap: 10px;
+      }
+      #minus, #plus{
+          padding: 5px 10px !important;
+          border:none;
+          background-color:var(--primary-color);
+          color: var(--btn-color);
+          font-size: var(--font-size14);
+          font-weight: var(--font-weight600);
+      }
+      .qty_btn_div input{
+          width: 60px;
+          font-size: var(--font-size14);
+          font-weight: var(--font-weight600);
+      }
+      .checkout_btn{
+        background-color: var(--primary-color);
+        color: var(--btn-color);
+        font-size: var(--font-size20);
+        font-weight: var(--font-weight600);
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+      }
+      .checkout_delete_btn{
+        font-size: var(--font-size20);
+        font-weight: var(--font-weight600);
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+        background-color: transparent;
+      }
+      .checkout_delete_btn i{
+        color: var(--primary-color);
+        font-size: 24px;
+      }
+      .couponform{
+          display:flex;
+          flex-direction:column;
+          align-items: center;
+          margin: 8px auto;
+        }
+        .coupon_inputdiv{
+          display: flex;
+          align-items: center;
+          box-shadow: var(--box-shadow);
+         
+        }
+      .coupon_inputdiv input{
+        padding: 6px
+      }
+        .applybtn{
+          background-color: var(--primary-color);
+          color: var(--btn-color);
+          font-size: var(--font-size20);
+          font-weight: var(--font-weight600);
+          border: none;
+          cursor: pointer;
+          padding: 6px;
+        }
+      
+        .item_checkout_total{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .item_checkout_total p{
+          margin: 5px;
+          font-size: var(--font-size16);
+            font-weight: var(--font-weight600);
+            font-family: var(--font-family);
+            color: var(--text-color) !important;
+        }
+
+ /* checkout forms */
+
+ .paymentforms_container{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin: 40px auto;
+    justify-content: center;
+}
+.paymentforms_container button{
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--btn-color);
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight600);
+    padding: 8px;
+    border-radius: 10px;
+  
+}
+
+.paginate button{
+    background-color: var(--primary-color);
+    color: var(--btn-color);
+}
+
+.lert-dange{
+    color: red !important;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}

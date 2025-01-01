@@ -1,0 +1,87 @@
+.loginform_container .loginform{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    margin: 20px auto;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    border-radius: 10px;
+}
+.loginform .login_input_div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.loginform .login_input_div label{
+    margin-top: 5px;
+    font-size: var(--font-size12);
+}
+.loginform .login_input_div input{
+    width: 100%;
+    padding: 8px;
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight400);
+    outline: none;
+    border-radius: 5px;
+    border: 0.5px solid gray;
+}
+.login_btn{
+    margin: 10px 0px;
+}
+.login_btn button{
+    border: none;
+    background-color: var(--site-color);
+    padding: 8px;
+    width: 150px;
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight400);
+    color: var(--white-color);
+    cursor: pointer;
+    margin: 10px 0px;
+}
+.reset_password{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0px;
+}
+.reset_password a{
+    color: var(--black-color);
+   
+    padding: 6px 8px;
+    text-decoration: none;
+}
+
+.reset_password button{
+    color: var(--black-color);
+    background-color: transparent;
+    padding: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.account_suggestion{
+    text-align: center;
+}
+.account_suggestion a{
+    text-decoration: none;
+    color: gray;
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight400);
+}
+@media only screen and (max-width: 768px)
+{
+   
+    .loginform_container .loginform{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px auto;
+        box-shadow: var(--box-shadow);
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
