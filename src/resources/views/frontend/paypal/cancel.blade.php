@@ -6,6 +6,9 @@
         max-width: 90%;
         margin: 50px auto;
     }
+    body{
+        background-color: white;
+    }
 </style>
 <section class="successpayment">
     <h1>Cancle</h1>

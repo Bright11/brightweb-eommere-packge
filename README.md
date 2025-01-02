@@ -38,6 +38,15 @@ php artisan migrate
 ### Step 3: Start the Project
 
 Start your Laravel development server with:
+Remember to comment you defalut laravel home route for your site to use the packge home directory, to do this, navigate into routes/web.php 
+
+```bash
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+```
+
+
 
 ```bash
 php artisan serve
@@ -200,6 +209,8 @@ MAIL_PORT=587
 MAIL_USERNAME=your_email@gmail.com
 MAIL_PASSWORD=your_password
 MAIL_ENCRYPTION=tls
+
+The site will send an email to an admin using your MAIL_FROM_ADDRESS on .env
 
 ## SEO Features
 The package includes SEO-friendly features to optimize your site for search engines. As an admin, you can configure:

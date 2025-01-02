@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Email Template with Product Table</title>
+    <title>{{ $metaseo->site_title }}</title>
     <style>
         * {
             box-sizing: border-box;
@@ -82,7 +82,13 @@
                 <table class="header" role="presentation" width="100%">
                     <tr>
                         <td>
-                            <h1>Your Company Logo</h1>
+                            @if ( $metaseo->site_title )
+                            {{ $metaseo->site_title }}
+                            @else
+                            <h1>Your online order</h1>
+                            @endif
+                          
+                           
                         </td>
                     </tr>
                 </table>
@@ -180,7 +186,15 @@
                 <table class="footer" role="presentation" width="100%">
                     <tr>
                         <td>
-                            <p>&copy; 2024 Your Company. All rights reserved.</p>
+                            @php
+                            $year=date('Y');
+                        @endphp
+                        @if ( $metaseo->site_title)
+                        <p>&copy; {{ $year }}  {{ $metaseo->site_title }}. All rights reserved.</p>
+                        @else
+                       
+                        @endif
+                          
                         </td>
                     </tr>
                 </table>

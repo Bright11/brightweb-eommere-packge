@@ -2,9 +2,12 @@
     <nav class="topnavbar">
         <ul class="ul_top_nav">
             <li class="logo_li"><a href="#">
-     
                 {{-- <img src="{{ asset("brightweblogo/logo.jpeg") }}" alt="Logo"> --}}
+              
+                @if($metaseo->site_logo)
                 <img src="{{ asset("seo/$metaseo->site_logo") }}" alt="logo">
+                @else
+                <img src="{{ asset("brightweblogo/logo.jpeg") }}" alt="Logo"> 
 
             </a>
         </li>

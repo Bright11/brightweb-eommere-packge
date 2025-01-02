@@ -2,6 +2,9 @@
 
 @section('content')
 <style>
+     body{
+        background-color: white;
+    }
     .successpayment {
         max-width: 90%;
         margin: 50px auto;

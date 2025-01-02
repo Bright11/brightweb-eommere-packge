@@ -25,6 +25,12 @@ class PaystackController extends Controller
         $this->paystackserviceclass=$paystackserviceclass;
     }
 
+
+    function isEmailConfigured()
+    {
+        return config('mail.username') && config('mail.from.address');
+    }
+    
     public function paywithpaystack(Request $req)
     {
 
@@ -90,13 +96,15 @@ class PaystackController extends Controller
         ->where('is_emailed', false)
         ->get();
         $payment=Payment::where("user_id",Auth::user()->id) ->where('is_emailed', false)->first();
-        try{
-           $sendingmail= Mail::to([Auth::user()->email,"chikanwazuo@GMail.com"])->send(new OrderEmail($orderdata,$payment));
-           $mailinfor="We have sent you an email with the order details";
-
-        }catch(\Exception $e){
-           $mailinfor='Sorry! we could not send you an email, your transaction was successful, please check your dashboard for the order details';
-    }
+        if (isEmailConfigured()) {
+            try{
+                $sendingmail= Mail::to([Auth::user()->email,config('mail.from.address')])->send(new OrderEmail($orderdata,$payment));
+                $mailinfor="We have sent you an email with the order details";
+     
+             }catch(\Exception $e){
+                $mailinfor='Sorry! we could not send you an email, your transaction was successful, please check your dashboard for the order details';
+         }
+        }
             foreach ($orderdata as $order) {
                 $order->is_emailed = true;
                 $order->save();
