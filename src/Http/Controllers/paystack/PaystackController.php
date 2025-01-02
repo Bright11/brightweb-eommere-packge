@@ -26,10 +26,7 @@ class PaystackController extends Controller
     }
 
 
-    function isEmailConfigured()
-    {
-        return config('mail.username') && config('mail.from.address');
-    }
+   
     
     public function paywithpaystack(Request $req)
     {

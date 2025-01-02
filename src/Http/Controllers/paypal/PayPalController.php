@@ -27,10 +27,7 @@ class PayPalController extends Controller
         $this->Paypalclass= $Paypalclass;
     }
 
-    function isEmailConfigured()
-{
-    return config('mail.username') && config('mail.from.address');
-}
+  
 
     public function createPaypalOrder(Request $req)
     {
@@ -166,7 +163,7 @@ class PayPalController extends Controller
         ->where('is_emailed', false)
         ->get();
         $payment=Payment::where("user_id",Auth::user()->id) ->where('is_emailed', false)->first();
-        if (isEmailConfigured()) {
+        
             try{
                 $sendingmail= Mail::to([Auth::user()->email,config('mail.from.address')])->send(new OrderEmail($orderdata,$payment));
                 $mailinfor="We have sent you an email with the order details";
@@ -174,7 +171,7 @@ class PayPalController extends Controller
              }catch(\Exception $e){
                 $mailinfor='Sorry! we could not send you an email, your transaction was successful, please check your dashboard for the order details';
          }
-        }
+        
        
             foreach ($orderdata as $order) {
                 $order->is_emailed = true;
