@@ -8,6 +8,7 @@
                 <img src="{{ asset("seo/$metaseo->site_logo") }}" alt="logo">
                 @else
                 <img src="{{ asset("brightweblogo/logo.jpeg") }}" alt="Logo"> 
+                @endif
 
             </a>
         </li>
