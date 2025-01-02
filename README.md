@@ -237,5 +237,5 @@ The BrightWeb E-Commerce Package is an excellent tool for building scalable e-co
 Explore the Admin Dashboard for further customization and enhancements, and enjoy building your e-commerce site!
 ## Support
 
-For support, please visit the [BrightWeb E-Commerce GitHub repository](#).
+<!-- For support, please visit the [BrightWeb E-Commerce GitHub repository](#). -->
 
