@@ -183,6 +183,9 @@ class PayPalController extends Controller
 
     }
 }
+public function cancel()
+{
+    return view("brightweb::frontend.paypal.cancel");
 
-
+}
 }

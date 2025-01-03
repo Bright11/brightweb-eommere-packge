@@ -16,9 +16,9 @@ class Paypalclass
     public function __construct()
     {
         //
-        $this->clientId=config("sitesettings.paypal.client_id");
-        $this->clientSecret=config("sitesettings.paypal.client_secret");
-        $this->apiUrl=config("sitesettings.paypal.api_url",'https://api.sandbox.paypal.com');
+        $this->clientId=config("brightwebconfig.paypal.client_id");
+        $this->clientSecret=config("brightwebconfig.paypal.client_secret");
+        $this->apiUrl=config("brightwebconfig.paypal.api_url",'https://api.sandbox.paypal.com');
     }
 
     public function getAccessToken()

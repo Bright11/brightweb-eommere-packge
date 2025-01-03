@@ -1,4 +1,7 @@
 @extends('brightweb::frontend.include.header')
+@section("title")
+<title>{{ $metaseo->site_title ?? 'Bright C Web Develloper' }}</title>
+@endsection
 
 @section('content')
 <style>
@@ -18,6 +21,19 @@
         text-align: center;
         font-size: 36px;
         color: black;
+    }
+    h1{
+        font-size: 36px;
+        color: black !important;
+    }
+    p{
+        color: gray !important;
+        font-size: 24px;
+    }
+    h3{
+        font-size: 36px;
+        color: black !important;
+        text-align: center;
     }
 </style>
 <section class="successpayment">

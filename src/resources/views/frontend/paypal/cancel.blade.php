@@ -1,4 +1,7 @@
 @extends('brightweb::frontend.include.header')
+@section("title")
+<title>{{ $metaseo->site_title ?? 'Bright C Web Develloper' }}</title>
+@endsection
 
 @section('content')
 <style>
@@ -11,6 +14,6 @@
     }
 </style>
 <section class="successpayment">
-    <h1>Cancle</h1>
+    <h1>Your order was canceled</h1>
 </section>
 @endsection
