@@ -192,11 +192,17 @@ PAYSTACK_PUBLIC_KEY=your_public_key
 ```
 
 ---
+## Run the code below to clear all cacch
+```php
+php artisan config:clear
+php artisan cache:clear
+
+```
 
 ## Notes
 
 1. For testing purposes, an admin user cannot purchase items.
-2. To test as a user, do not promote the test email to admin.
+2. After registretion, To test as a user, do not promote the test email to admin.
 3. Email notifications will be sent for order confirmations.
 4. Regularly update your `.env` file with valid keys for payment gateways.
 

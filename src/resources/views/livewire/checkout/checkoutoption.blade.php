@@ -1,3 +1,6 @@
+@section("title")
+<title>{{ $category->name }} | {{ $metaseo->site_title ?? 'Bright C Web Develloper' }}</title>
+@endsection
 <section class="product_section">
   @if ($countcart)
     
