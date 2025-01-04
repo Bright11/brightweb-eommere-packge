@@ -37,8 +37,12 @@ php artisan migrate
 
 ### Step 3: Start the Project
 
-Start your Laravel development server with:
-Remember to comment you defalut laravel home route for your site to use the packge home directory, to do this, navigate into routes/web.php 
+Start your Laravel development server with php artisan serve:
+
+```bash
+php artisan serve
+```
+Remember to comment your defalut laravel home page route for your site to use the packge home directory, to do this, navigate into routes/web.php 
 
 ```bash
 // Route::get('/', function () {
@@ -46,15 +50,10 @@ Remember to comment you defalut laravel home route for your site to use the pack
 // });
 ```
 
-
-
-```bash
-php artisan serve
-```
-
 ### Step 4: Promote an Admin User
 
-Manually promote an email to admin by editing the `users` table in the database:
+Manually promote user to admin by editing the `users` table in the database:
+after registration
 
 1. Locate the user’s record.
 2. Update the `role` field to `admin`.
@@ -178,8 +177,8 @@ The configuration file will be located at `config/brightwebconfig.php`.
 Add the following to your `.env` file:
 
 ```env
-PAYPAL_CLIENT_ID=your_client_id
-PAYPAL_CLIENT_SECRET=your_client_secret
+PAYPAL_CLIENT_ID="your_client_id"
+PAYPAL_CLIENT_SECRET="your_client_secret"
 ```
 
 ### Paystack
@@ -187,8 +186,8 @@ PAYPAL_CLIENT_SECRET=your_client_secret
 Add the following to your `.env` file:
 
 ```env
-PAYSTACK_SECRET_KEY=your_secret_key
-PAYSTACK_PUBLIC_KEY=your_public_key
+PAYSTACK_SECRET_KEY="your_secret_key"
+PAYSTACK_PUBLIC_KEY="your_public_key"
 ```
 
 ---
@@ -209,12 +208,17 @@ php artisan cache:clear
 ## Email Configuration: 
 Set up email services in the .env file. For Gmail, you can use the following configuration for testing:
 
+```php
 MAIL_MAILER=smtp
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=587
-MAIL_USERNAME=your_email@gmail.com
-MAIL_PASSWORD=your_password
+MAIL_USERNAME=youremail@domain.com
+MAIL_PASSWORD="password"
 MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=youremail@domain.com
+MAIL_FROM_NAME="${APP_NAME}"
+
+```
 
 The site will send an email to an admin using your MAIL_FROM_ADDRESS on .env
 

@@ -22,7 +22,7 @@
     </div>
     
     <div class="input_div">
-        <input type="number" name="buying_price" placeholder="Product bought price" value="{{ $product->buying_price??null }}" />
+        <input type="number" name="buying_price" placeholder="Product Purchase price" value="{{ $product->buying_price??null }}" />
         @error('buying_price') <span class="error">{{ $message }}</span> @enderror
     </div>
     

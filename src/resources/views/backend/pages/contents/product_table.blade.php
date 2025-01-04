@@ -4,7 +4,7 @@
         <th>Name</th>
         <th>Image</th>
         <th>Qty</th>
-        <th>Price bught</th>
+        <th>Purchase price</th>
         <th>Selling price</th>
         <th>Update</th>
         <th>Delete</th>
