@@ -122,7 +122,7 @@ The configuration file will be located at `config/brightwebconfig.php`.
 
 ```php
 'currency' => [
-    'site_Currency' => '$',// here you an add your currency 
+    'site_Currency' => '$',// here you can add your currency 
 ],
 ```
 
