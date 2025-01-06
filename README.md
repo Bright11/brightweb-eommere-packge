@@ -241,6 +241,18 @@ Ensure you’ve set the correct role to admin in the database for the user accou
 Issue: Payments Not Processing
 Double-check the credentials in your .env file for PayPal and Paystack.
 
+## License
+
+This package is open-sourced software licensed under the <a href='/https://opensource.org/license/'>MIT license</a>.
+
+## Contributing
+
+We welcome contributions to enhance this package.
+Please contact us at <a href="mailto:chikanwazuo@gmail.com">chikanwazuo@gmail.com</a>
+
+Thank you for choosing BrightWeb E-Commerce! If you have any questions or need support,
+please feel free to open an issue on GitHub.
+
 ## Conclusion
 The BrightWeb E-Commerce Package is an excellent tool for building scalable e-commerce sites with powerful admin and user features. Customize the frontend and backend settings to suit your needs, and easily manage orders, products, and payments.
 
@@ -248,4 +260,7 @@ Explore the Admin Dashboard for further customization and enhancements, and enjo
 ## Support
 
 <!-- For support, please visit the [BrightWeb E-Commerce GitHub repository](#). -->
+For support, please send us an email  a href="mailto:chikanwazuo@gmail.com">chikanwazuo@gmail.com</a>
+<
+
 
