@@ -1,6 +1,6 @@
 {
     "name": "brightweb/ecommerce",
-    "description": "Brightweb ecommerce package",
+    "description": "The BrightWeb E-Commerce package is a complete e-commerce solution built with Laravel, Livewire, HTML, CSS, and JavaScript. It provides a full-featured frontend and backend for managing and selling products.",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -8,9 +8,14 @@
             "Brightweb\\Ecommerce\\": "src/"
         }
     },
-    "extra":{
-        "laravel":{
-            "providers":[
+    "autoload-dev": {
+        "psr-4": {
+            "Brightweb\\Ecommerce\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
                 "Brightweb\\Ecommerce\\Providers\\BrightserviceProvider",
                 "Brightweb\\Ecommerce\\Providers\\Brightlivewiresettings",
                 "Brightweb\\Ecommerce\\Providers\\ConfigServiceProvider",
@@ -20,12 +25,33 @@
     },
     "authors": [
         {
-            "name": "Brightweb"
+            "name": "Bright C Web",
+            "email": "chikanwazuo@gmail.com"
         }
     ],
+    "keywords": [
+        "ecommerce",
+        "laravel",
+        "laravel-ecommerce",
+        "livewire",
+        "shopping-cart",
+        "online-store",
+        "storefront",
+        "ecommerce-package",
+        "product-management",
+        "order-management",
+        "laravel-package",
+        "brightweb",
+        "brightcweb",
+        "laravel-livewire"
+    ],
     "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": "^7.3|^8.0",
-        "livewire/livewire": "^3.0" 
+        "livewire/livewire": "^3.0"
+    },
+    "scripts": {
+        "test": "phpunit --configuration phpunit.xml"
     }
 }
