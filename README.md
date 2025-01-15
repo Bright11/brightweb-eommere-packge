@@ -79,6 +79,7 @@ Admins can:
   - Quantity.
   - Discount.
   - coupon code.
+  - Add background image optional
 
 ### Order Management
 
@@ -141,10 +142,26 @@ The configuration file will be located at `config/brightwebconfig.php`.
 - To setup the colors of your navigation
 ```php
 'frontend_navigation_settings' => [
-    'navigation_bg_color' => 'black', 
+    'navigation_bg_color' => 'black',
     'navigation_text_color' => 'white',
 ],
+
 ```
+#### Product slider or background image  Customizer
+    Please select your **preference** or disable both options by setting them to false.
+
+     If you choose "show_background_image," ensure you upload a suitable image via the admin dashboard.
+     
+    Customize the image to match your design requirements.
+```php
+'slider_display_option'=>[
+        "show_slider"=>true,# To disabled, set it to false
+        "show_background_image"=>false,# To enabled, set it to true
+    ],
+
+```
+
+
 
 #### Frontend Site Settings
 

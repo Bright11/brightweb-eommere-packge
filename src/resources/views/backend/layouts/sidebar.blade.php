@@ -13,6 +13,7 @@
     <li><i class="fa fa-search"></i><a href="{{ route("add_seo") }}">Add or Update SEO</a></li>
     <li><i class="fa fa-search"></i><a href="{{ route("viewsiteseo") }}">Viwe SEO</a></li>
     <li><i class="fa fa-people"></i> <a href="{{ route("addsocial_links") }}">Social Media</a></li>
+    <li><i class="fa fa-user"></i><a href="{{ route("sitebgimage") }}">Background Image</a></li>
     <li><i class="fa fa-sign-out" ></i><a href="{{ route("logout") }}">Logout</a></li>
  
   </ul>

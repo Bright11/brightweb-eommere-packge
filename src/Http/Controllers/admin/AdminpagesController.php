@@ -4,6 +4,7 @@ namespace Brightweb\Ecommerce\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Brightweb\Ecommerce\Models\Aboutus;
+use Brightweb\Ecommerce\Models\BackgroundImage;
 use Illuminate\Http\Request;
 use Brightweb\Ecommerce\Models\Product;
 use Brightweb\Ecommerce\Models\Category;
@@ -356,5 +357,45 @@ class AdminpagesController extends Controller
     public function viewusershipping($id){
         $shipping=Shipping::where("user_id",$id)->first();
         return view("brightweb::backend.pages.view_user_shipping",compact("shipping"));
+    }
+
+    public function sitebgimage(Request $request){
+        $bg=BackgroundImage::first();
+        if($request->isMethod("post")){
+            if($bg){
+                if ($request->hasFile('bgimage')) {
+                    $image = $request->file('bgimage');
+                    $imageName = time().'.'.$image->extension();
+                    $image->move(public_path('seo'),$imageName);
+                     
+                    $bg->bgimage = $imageName;
+                    $bg->update();
+                  
+                }
+            }else{
+                if ($request->hasFile('bgimage')) {
+                    $newbg=new BackgroundImage;
+                    $image = $request->file('bgimage');
+                    $imageName = time().'.'.$image->extension();
+                    $image->move(public_path('seo'),$imageName);
+                     
+                    $newbg->bgimage = $imageName;
+                    $newbg->save();
+                  
+                }
+            }
+            
+        }
+      
+        return view("brightweb::backend.pages.sitebackgroundimage",compact("bg"));
+
+    }
+
+    public function deletesitebgimage(){
+        $bg=BackgroundImage::first();
+        if($bg){
+            $bg->delete();
+        }
+        return redirect()->back()->with("message", "Background image deleted");
     }
 }

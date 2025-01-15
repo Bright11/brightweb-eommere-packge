@@ -19,7 +19,6 @@
                         <a href="#">Category</a>
                        <div class="drop_down_category_di">
                         <ul class="category_dropdown_ul">
-                            <li><a href="">Contact</a></li>
                             @forelse ($datacategory as $item)
                             <li><a href="{{route("allcategory",$item['slug'])}}">{{$item->name}}</a></li>
                             @empty

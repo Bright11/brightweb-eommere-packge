@@ -65,8 +65,10 @@
                 <div class="contact_footer">
                     <div class="pox_address">
                         <p>{{ $social_links->box_address }}</p>
+                       @if ($social_links->phone_number)
+                       <p>Tel: <i class="fa fa-phone" style="font-size:24px"></i>{{ $social_links->phone_number }}</p>
+                       @endif
                        
-                        <p>Tel: <i class="fa fa-phone" style="font-size:24px"></i>{{ $social_links->phone_number }}</p>
                         {{-- <p>Fax: +233538260666</p> --}}
         
                     </div>

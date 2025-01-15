@@ -1,6 +1,13 @@
 <?php
 // #eceff1
 return[
+    'slider_display_option'=>[
+        // Be aware you must chose one or turn both off by setting them to false
+        // when you chose show_background_image, please add the image you want to use from your admin dashboard
+        // design the image to suit your need
+        "show_slider"=>true,# To disabled, set it to false
+        "show_background_image"=>false,# To enabled, set it to true
+    ],
     'currency' => [
         "site_Currency"=>'$',
 ],

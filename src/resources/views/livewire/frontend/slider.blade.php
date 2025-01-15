@@ -19,6 +19,8 @@
 
 
 <!-- the end -->
+@if (config('brightwebconfig.slider_display_option.show_slider')==true)
+
         <div class="owl-carousel mytopslider" >
 
         @forelse($sliderproduct as $slider)
@@ -65,5 +67,17 @@
 
 
           </div>
+          @endif
+
+          @if (config('brightwebconfig.slider_display_option.show_background_image')==true)
+          @if ($bgimage)
+          <div class="bgimage" >
+            <img src="{{asset("seo/$bgimage->bgimage")}}" alt="Bg image">
+          </div>
+          @endif
+          
+          @endif
+          
+    </div>
     </div>
 </section>

@@ -2,6 +2,7 @@
 
 namespace Brightweb\Ecommerce\Providers;
 
+use Brightweb\Ecommerce\Models\BackgroundImage;
 use Brightweb\Ecommerce\Models\Category;
 use Brightweb\Ecommerce\Models\Product;
 use Brightweb\Ecommerce\Models\SiteSEO;
@@ -90,8 +91,10 @@ View::composer('*', function ($view) {
     $view->with('default_currency', "₵");
 });
 
-
-
+View::composer('*', function ($view) {
+    //  $products = Product::orderBy('title', 'asc')->get();
+        $view->with('bgimage', BackgroundImage::first());
+    });
 
     }
     

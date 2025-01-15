@@ -44,6 +44,11 @@ Route::match(['get','post'],'/proccessing_order/{paymentis}',[AdminpagesControll
   Route::get("/deleteaboutus/{id}",[AdminpagesController::class,'deleteaboutus'])->name("deleteaboutus");
 
   Route::get("/viewusershipping/{id}",[AdminpagesController::class,'viewusershipping'])->name("viewusershipping");
+
+  Route::match(['post', 'get'], '/sitebgimage', [AdminpagesController::class, 'sitebgimage'])->name('sitebgimage');
+
+  Route::get("/deletesitebgimage",[AdminpagesController::class,'deletesitebgimage'])->name("deletesitebgimage");
+
   
 });
 
