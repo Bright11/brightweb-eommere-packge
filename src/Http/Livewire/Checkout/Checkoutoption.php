@@ -25,7 +25,8 @@ class Checkoutoption extends Component
     public function applycoupon()
     {
        
-        $checkcoupon=Coupon::where("code", $this->coupon)->first();
+
+        $checkcoupon=Coupon::where("code", $this->coupon)->where("status","active")->first();
         if(!$checkcoupon){
             session()->flash('message', 'No coupon with this code found.');
             return;
@@ -41,6 +42,15 @@ class Checkoutoption extends Component
             return;
            }
         }
+        //chech number of users
+        if ($checkcoupon->max_users > 0) { // Check only if there is a limitation
+            if ($checkcoupon->usage_count >= $checkcoupon->max_users) {
+                session()->flash('message', 'This coupon code has reached its maximum usage limit.');
+                return;
+            }
+        }
+        
+        
         // appling coupon code
         $checkcart=Cart::where("user_id",Auth::user()->id)->first();
         if(!$checkcart){

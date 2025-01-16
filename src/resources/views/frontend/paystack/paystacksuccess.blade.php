@@ -49,7 +49,7 @@
                     <h2>Payment Successful</h2>
                 </div>
                 <div class="card-body">
-                    <p>Thank you for your donation, {{ $name }}!</p>
+                    <p>Thank you for your Order, {{ $name }}!</p>
                     <p>Your transaction was successful.</p>
                     <p>{{ $mailinfor }}</p>
                     <ul class="list-group">

@@ -72,6 +72,7 @@ class UsersPageController extends Controller
         return view("brightweb::userprofile.myOrders",compact("orders"));
     }
 
+    
     public function usercompletedorders()
     {
         $orders=Payment::where("user_id",Auth::user()->id)->where('order_status', '=', 'completed')->get();
@@ -81,9 +82,12 @@ class UsersPageController extends Controller
     public function myproduct($paymentid)
     {
        // $product=Order::with('product')->where('paymentid', $paymentid)->get();
-       $product = Order::with('product')
-    ->where('paymentid', $paymentid)
-    ->where('status', '=', 'completed')->where("user_id",Auth::user()->id)
+    //    $product = Order::with('product')
+    // ->where('paymentid', $paymentid)
+    // ->where('status', '=', 'completed')->where("user_id",Auth::user()->id)
+    // ->get();
+    $product = Order::with('product')
+    ->where('paymentid', $paymentid)->where("user_id",Auth::user()->id)
     ->get();
         return view("brightweb::userprofile.myproducts",['product'=>$product]);
     }

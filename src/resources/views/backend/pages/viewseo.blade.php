@@ -19,11 +19,11 @@
             <p>{{ $seo->meta_keywords }}</p>
             <h1>{{ $seo->twitter_title }}</h1>
             <p>{{ $seo->twitter_description }}</p>
-            <img width="80px" height="80px" src="{{ $seo->twitter_image }}" alt="">
+            <img width="80px" height="80px" src="{{ asset("seo/$seo->twitter_image") }}" alt="">
             <h1>{{ $seo->og_title }}</h1>
             <p>{{ $seo->og_description }}</p>
-            <img width="80px" height="80px" src="{{ $seo->og_image }}" alt="">
-            <img width="80px" height="80px" src="{{ $seo->site_logo }}" alt="">
+            <img width="80px" height="80px" src="{{ asset("seo/$seo->og_image") }}" alt="">
+            <img width="80px" height="80px" src="{{ asset("seo/$seo->site_logo") }}" alt="">
             @endif
       </div>
     </div>

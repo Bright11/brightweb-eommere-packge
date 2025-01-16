@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->integer('usage_count')->default(0);
+            $table->integer('max_users')->nullable(0);
             $table->boolean('one_time_use')->default(false);
             //$table->decimal('discount_amount', 10, 2)->nullable(); // Fixed amount discount
             $table->decimal('discount_percentage', 5, 2)->nullable(); // Percentage discount

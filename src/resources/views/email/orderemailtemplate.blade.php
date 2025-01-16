@@ -138,7 +138,7 @@
                                     <tr>
                                         <td>${{ $payment->original_price }}</td>
                                         <td>${{ $payment->paid_amount }}</td>
-                                        <td>${{ $payment->discount_amount }}</td>
+                                        <td>{{ $payment->discount_percentage }}%</td>
                                     </tr>
                                 </tbody>
                             </table>

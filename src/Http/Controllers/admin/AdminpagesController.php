@@ -35,17 +35,17 @@ class AdminpagesController extends Controller
         if($req->isMethod("post")){
             
          
-            // $req->validate([
-            //     'name' => 'required|string|max:255|unique:products,name,' . $req->itemId,
-            //     'description' => 'required|string',
-            //     'keywords' => 'required|string',
-            //     'buying_price' => 'required|numeric|min:0',
-            //     'selling_price' => 'required|numeric|min:0',
-            //     'discount' => 'nullable|numeric|min:0|max:100',
-            //     'qty' => 'required|integer|min:0',
-            //     'category_id' => 'required|exists:categories,id',
-            //     'image_pc' => 'nullable|image|jpg,jpeg,png|max:1024', // Adjust max size as needed
-            // ]);
+            $req->validate([
+                'name' => 'required|string|max:255|unique:products' . $req->itemId,
+                'description' => 'required|string',
+                'keywords' => 'required|string',
+                'buying_price' => 'required|numeric|min:0',
+                'selling_price' => 'required|numeric|min:0',
+                'discount' => 'nullable|numeric|min:0|max:100',
+                'qty' => 'required|integer|min:0',
+                'category_id' => 'required|exists:categories,id',
+                'image_pc' => 'nullable|image|mimes:jpg,jpeg,png|max:1024', // Adjust max size as needed
+            ]);
             $attributes = [
                 'name' => $req->name,
                 'description'=>$req->description,
@@ -159,11 +159,11 @@ class AdminpagesController extends Controller
     public function add_seo(Request $req)
     {
         // Retrieve the first record or create a new instance
-        $site_setting = SiteSEO::firstOrNew([]);
-    
+      
+      $site_setting = SiteSEO::firstOrNew([]);
         if ($req->isMethod('post')) {
             $req->validate([
-                'site_logo' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+                'site_logo' => 'image|mimes:jpeg,png,jpg|max:2048',
                 'meta_description' => 'required|string',
                 'meta_keywords' => 'required|string',
                 // 'meta_robots'=>'required|string',
