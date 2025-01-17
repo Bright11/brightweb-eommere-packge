@@ -2,9 +2,17 @@
 <section class="bannar_section">
 
         {{-- <div class="bannar_container" style="background-image: url({{ route('brightweb.frontend.image', ['filename' => 'images/bg_image.avif']) }});"> --}}
-            <div class="bannar_container" style="background-image: url();">
+            {{-- <div class="bannar_container" > --}}
 <!-- category -->
 {{--  <img src="{{ route('brightweb.frontend.image', ['filename' => 'logo/logo.jpeg']) }}" alt="Logo"> --}}
+@if (!(config('brightwebconfig.slider_display_option.show_slider') == true) && !(config('brightwebconfig.slider_display_option.show_background_image') == true))
+
+    <!-- Both conditions are false -->
+    <div class="bannar_containers" >
+    
+        @else
+        <div class="bannar_container" >
+            @endif
 @if (config('brightwebconfig.frontend_category_settings.show_sidebar_category')==true)
 <ul class="category_sidebar category_sidebar_settings">
 

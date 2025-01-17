@@ -50,9 +50,11 @@
                     
                 </ul>
             </li>
+            @if (config('brightwebconfig.translator.enable_google_translate')==true)
            <li >
             <div id="google_translate_element"></div>
            </li>
+           @endif
            <li class="hurburgar" onclick="toggleNav()"><button class="open_nav_btn"><i class="fa fa-bars" style="font-size:36px"></i></button></li>
         </ul>
         <!-- searchbar and catcount -->

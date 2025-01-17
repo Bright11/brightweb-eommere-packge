@@ -216,7 +216,13 @@ php artisan config:clear
 php artisan cache:clear
 
 ```
+## Enable or Disable Translator
 
+```php
+  "translator"=>[
+        "enable_google_translate"=>true,#Enable or Disable google translate
+    ],
+```
 ## Notes
 
 1. For testing purposes, an admin user cannot purchase items.

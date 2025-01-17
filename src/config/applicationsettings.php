@@ -5,8 +5,11 @@ return[
         // Be aware you must chose one or turn both off by setting them to false
         // when you chose show_background_image, please add the image you want to use from your admin dashboard
         // design the image to suit your need
-        "show_slider"=>true,# To disabled, set it to false
-        "show_background_image"=>false,# To enabled, set it to true
+        "show_slider"=>false,# To disabled, set it to false
+        "show_background_image"=>true,# To enabled, set it to true
+    ],
+    "translator"=>[
+        "enable_google_translate"=>true,#Enable or Disable google translate
     ],
     'currency' => [
         "site_Currency"=>'$',
@@ -14,7 +17,7 @@ return[
 
 "frontend_category_settings"=>[
     "show_top_categories"=>true,# sto show the top category, set it to true
-    "show_sidebar_category"=>true, # to show the sidebar category, set it to true
+    "show_sidebar_category"=>false, # to show the sidebar category, set it to true
 ],
 // Frontend navigation settings
     'frontend_navigation_settings'=>[
