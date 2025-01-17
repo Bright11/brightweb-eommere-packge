@@ -279,4 +279,4 @@ Explore the Admin Dashboard for further customization and enhancements, and enjo
 ## Support
 
 <!-- For support, please visit the [BrightWeb E-Commerce GitHub repository](#). -->
-For support, please send us an email  <a href="mailto:chikanwazuo@gmail.com">chikanwazuo@gmail.com</a>
+For support, please send us an email at  <a href="mailto:chikanwazuo@gmail.com">chikanwazuo@gmail.com</a>
